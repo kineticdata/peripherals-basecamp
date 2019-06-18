@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_project_event_create" name="Basecamp Project Event Create"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Create an event within a project for Basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="project_name" label="Current Project Name" required="true" tooltip="The name of the project you wish to add an event to." />
+	    <parameter id="summary" label="Summary" required="true" tooltip="The label of the event to be created." />
+	    <parameter id="description" label="Description" required="false" tooltip="Description of the event." />
+	    <parameter id="starts_at" label="Starts At" required="true" tooltip="Starting date of the event. YYYY-MM-DD" />
+	    <parameter id="ends_at" label="Ends At" required="false" tooltip="End date of the event if different than the start. YYYY-MM-DD" />
+	</parameters>
+	<handler name="basecamp_project_event_create" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="project_name">&lt;%= @parameters['project_name'] %&gt;</parameter>
+		    <parameter name="summary">&lt;%= @parameters['summary'] %&gt;</parameter>
+		    <parameter name="description">&lt;%= @parameters['description'] %&gt;</parameter>
+		    <parameter name="starts_at">&lt;%= @parameters['starts_at'] %&gt;</parameter>
+		    <parameter name="ends_at">&lt;%= @parameters['ends_at'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>

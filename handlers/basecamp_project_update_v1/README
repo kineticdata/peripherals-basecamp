@@ -1,0 +1,33 @@
+=== BasecampProjectUpdateV1
+    This handler allows you to create a new project for Basecamp.
+
+=== Parameters
+    [Project Name]
+        The current name of the project.
+    [New Project Name]
+	The new name of the project.
+    [New Project Description]
+        The new description of the project.
+			
+=== Results
+	No results are returned for this handler.
+	
+	An exception is raised if an existing project has
+	the same name as the given project name.
+
+==== Sample Configuration
+	Project Name : Board Presentation
+	Project Description : Group effort on the upcoming presentation.
+
+=== Detailed Description
+	This handler allows you to update an existing project for basecamp. If
+	the new project name matches the name of an existing project, an
+	exception will be raised. If the project is archived, an exception
+	will be raised.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

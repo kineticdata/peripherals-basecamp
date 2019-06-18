@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_project_todolist_create" name="Basecamp Project TodoList Create"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Create a new todolist for a project in basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="project_name" label="Current Project Name" required="true" tooltip="The name of the project you wish to add the todo list to." />
+	    <parameter id="todolist_name" label="Todo List Name" required="true" tooltip="The name of the todo list you wish to create. (must be unique)" />
+		<parameter id="todolist_description" label="New Project Description" required="false" tooltip="The description of the new todo list." />
+	</parameters>
+	<handler name="basecamp_project_todolist_create" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="project_name">&lt;%= @parameters['project_name'] %&gt;</parameter>
+		    <parameter name="todolist_name">&lt;%= @parameters['todolist_name'] %&gt;</parameter>
+		    <parameter name="todolist_description">&lt;%= @parameters['todolist_description'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>

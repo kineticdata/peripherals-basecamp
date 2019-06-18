@@ -1,0 +1,38 @@
+=== BasecampProjectTodolistCreateV1
+    This handler allows you to create a new todolist for a project in Basecamp.
+
+=== Parameters
+    [Project Name]
+    	     The name of the project you wish to add the todolist to.
+
+    [Todolist Name]
+    	     The name of the todo list you wish to create.
+
+    [Todolist Description] (optional)
+    	     The optional description for the todolist.
+		
+			
+=== Results
+    No results are returned for this handler.
+    
+    Exceptions will be raised if there is not exactly one project with the
+    given name. If there is an active or completed todo list already existing
+    with the given name.	
+
+=== Sample Configuration
+    Project Name : Example Project
+    Todolist Name : New todolist
+    Todolist Description : A todolist used in an example.
+
+=== Detailed Description
+    This is a handler to create a new todolist for a project in Basecamp. If
+    there is no project with the given name, or more than one project an exception
+    will be raised. Also, if there is already an existing todolist with the given name
+    an exception will be raised.
+
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

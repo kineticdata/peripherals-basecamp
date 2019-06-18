@@ -1,0 +1,28 @@
+== BasecampProjectUserInviteV1
+	Invite users to an existing project for Basecamp.
+
+=== Parameters
+	[Project Name]
+		The name of the project you wish to invite users to.
+	[Emails]
+		Emails of the users you wish to invite.
+	
+	Seperated by commas for multiple emails.
+
+=== Results
+	No results are returned for this handler.
+
+==== Sample Configuration
+	Project Name : Board Presentation
+	Emails : joe@example.com, karen@example.com, jim@example.com
+
+=== Detailed Description
+	This handler allows you to add users to an existing project in
+	Basecamp.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

@@ -1,0 +1,31 @@
+=== BasecampCalendarDeleteV1
+    This handler allows you to delete a calendar in Basecamp.
+
+=== Parameters
+    [Calendar Name]
+    	      The name of the calendar you wish to delete. 	
+			
+=== Results
+    No results are returned for this handler.
+    
+    An exception is raised if there is no calendar with the 
+    given name, or if there is more than one calendar with
+    the given name.
+
+=== Sample Configuration
+    Calendar Name: Test Calendar
+	
+
+=== Detailed Description
+    This handler will delete a calendar with the provided name. If there
+    is no calendar with the given name an exception will be raised. In
+    order to protect calendars that may have the same name as other
+    calendars, if there is more than one calendar with the given name an
+    exception will be raised.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

@@ -1,0 +1,45 @@
+=== BasecampProjectEventCreateV1
+    This handler allows you to create a new calendar event within a calendar for basecamp.
+
+=== Parameters
+    [Project Name]
+    	     The name of the project you wish to add an event to.
+
+    [Summary]
+    	     The label of the event to be created..
+
+    [Description] (optional)
+    	     The optional description for the event.
+
+    [Starts At]
+    	     The starting date of the event. (YYYY-MM-DD)
+
+    [Ends At] (optional)
+	     End date of the event if different than the start. (YYYY-MM-DD)
+		
+			
+=== Results
+    No results are returned for this handler.
+    
+    Exceptions will be raised if the project does not exist, there is more than
+    one project with the given name. Also if the date is not in the stated format
+    YYYY-MM-DD.
+
+=== Sample Configuration
+    Project Name : Example Project
+    Summary : Company Retreat
+    Description : An island get-away.
+    Starts At : 2013-07-03
+    Ends At : 2013-07-10
+
+=== Detailed Description
+    This is a handler to create an event within a calendar for Basecamp. Exceptions
+    will be raised if given project does not exist, if there is more than one project
+    with the given name, or if the date is not in the YYYY-MM-DD format.
+
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

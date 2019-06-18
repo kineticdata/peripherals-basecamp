@@ -1,0 +1,34 @@
+=== BasecampProjectTodolistDeleteV1
+    This handler allows you to delete a todolist for Basecamp.
+
+=== Parameters
+    [Project Name]
+	The name of the project you wish to remove users from.
+
+    [Project Todolist Name0]
+	The name of the todolist to delete.
+			
+=== Results
+	No results are returned for this handler.
+	
+	An exception is raised if there is not exactly one project
+	with the given project name with exactly one todolist with 
+	the given todolist name.
+
+==== Sample Configuration
+     Project Name : Board Presentation
+     Todolist Name : Presentation Todos
+
+=== Detailed Description
+    This handler allows you to delete a todo list for a project in
+    basecamp. An exception will be raised if there is not exactly
+    one project for the given project name. For the todo lists already
+    in that project, an exception will be raised if there is no existing
+    todo list for the given todolist name.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

@@ -1,0 +1,26 @@
+== BasecampProjectActivateV1
+	This handler allows you to activate an archived project for Basecamp.
+
+=== Parameters
+	[Project Name]
+		The name of the project you wish to activate.
+			
+=== Results
+	No results are returned for this handler.
+	
+	An exception is raised if an existing archived project does not exist.
+
+==== Sample Configuration
+	Project Name : Board Presentation
+
+=== Detailed Description
+	This handler allows you to activate an archived project for Basecamp.
+	If there is no archived project that has the has the given name an
+	exception will be raised.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

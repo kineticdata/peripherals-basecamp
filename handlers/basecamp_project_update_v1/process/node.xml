@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_project_update" name="Basecamp Project Update"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Update an existing project in basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="project_name" label="Current Project Name" required="true" tooltip="The name of the project you wish to update. (must be unique)" />
+	    <parameter id="new_project_name" label="New Project Name" required="true" tooltip="The new name of the project you wish to update. (must be unique)" />
+		<parameter id="new_project_description" label="New Project Description" required="true" tooltip="The new description of the project you wish to update." />
+	</parameters>
+	<handler name="basecamp_project_update" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="project_name">&lt;%= @parameters['project_name'] %&gt;</parameter>
+		    <parameter name="new_project_name">&lt;%= @parameters['new_project_name'] %&gt;</parameter>
+			<parameter name="new_project_description">&lt;%= @parameters['new_project_description'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>

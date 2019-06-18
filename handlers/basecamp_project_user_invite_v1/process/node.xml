@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_project_user_invite" name="Basecamp Project User Invite"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Invite a user to existing project in Basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="project_name" label="Project Name" required="true" tooltip="The name of the project you wish to invite users to." />
+		<parameter id="emails" label="Emails" required="true" tooltip="Users you wish to invite to the project." />
+	</parameters>
+	<handler name="basecamp_project_user_invite" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="project_name">&lt;%= @parameters['project_name'] %&gt;</parameter>
+			<parameter name="emails">&lt;%= @parameters['emails'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>

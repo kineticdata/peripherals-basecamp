@@ -1,0 +1,25 @@
+== BasecampCalendarCreateV1
+   This handler allows you to create a calendar in Basecamp.
+
+=== Parameters
+    [Calendar Name]
+          The name of the calendar you wish to add. (must be unique)
+			
+=== Results
+    No results are returned for this handler.
+	
+    An exception is raised if there is an existing calendar with the requested name.
+
+==== Sample Configuration
+     Calendar Name: New Calendar
+
+=== Detailed Description
+    This handler creates a new calendar for Basecamp. If there is an existing
+    calendar with the requested name an exception will be raised.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

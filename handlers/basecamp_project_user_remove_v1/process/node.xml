@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_project_user_remove" name="Basecamp Project User Remove"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Remove users from a project in Basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="project_name" label="Project Name" required="true" tooltip="The name of the project you wish to remove users from." />
+		<parameter id="user_email" label="User Email" required="true" tooltip="The email of the user you would like to remove from the project." />
+	</parameters>
+	<handler name="basecamp_project_user_remove" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="project_name">&lt;%= @parameters['project_name'] %&gt;</parameter>
+			<parameter name="user_email">&lt;%= @parameters['user_email'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>

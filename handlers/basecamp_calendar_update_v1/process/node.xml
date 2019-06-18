@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_calendar_update" name="Basecamp Calendar Update"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Changes the name of an existing calendar in Basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="calendar_name" label="Calendar Name" required="true" tooltip="The name of the calendar you wish to change the name of." />
+	    <parameter id="new_calendar_name" label="New Calendar Name" required="true" tooltip="The new name of the defined calendar." />
+	</parameters>
+	<handler name="basecamp_calendar_update" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="calendar_name">&lt;%= @parameters['calendar_name'] %&gt;</parameter>
+		    <parameter name="new_calendar_name">&lt;%= @parameters['new_calendar_name'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>

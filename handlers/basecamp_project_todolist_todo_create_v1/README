@@ -1,0 +1,43 @@
+=== BasecampProjectTodolistTodoCreateV1
+    This handler allows you to create a new todo task in Basecamp.
+
+=== Parameters
+    [Project Name]
+    	     The name of the project you wish to add the todolist to.
+
+    [Todolist Name]
+    	     The name of the todo list you wish to create.
+
+    [Content]
+	     Message describing the task.
+
+    [Due At]
+    	     Due date of the task. YYYY-MM-DD		
+			
+=== Results
+    No results are returned for this handler.
+    
+    Exceptions will be raised if there is not exactly one project with the
+    given name. If there is no todolist with the provided name, an exception 
+    will be raised. If the due at date is not either empty, or in the correct 
+    format, an exception will be raised.
+
+=== Sample Configuration
+    Project Name : Example Project
+    Todolist Name : Important Todos
+    Content : Create poster for presentation.
+    Due At : 2013-07-23
+
+=== Detailed Description
+    This handler will create a new todo task for a todo list within a 
+    project in Basecamp. Exceptions will be raised if the date is not
+    formatted correctly, if there is not exactly one project with the
+    given name, or if there is not exactly one todo list with the given
+    name.
+
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

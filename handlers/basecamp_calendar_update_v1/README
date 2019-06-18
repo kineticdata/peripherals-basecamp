@@ -1,0 +1,32 @@
+=== BasecampCalendarUpdateV1
+    This handler allows you to update the name of a calendar in basecamp.
+
+=== Parameters
+    [Calendar Name]
+    	      The current name of the calendar.
+
+    [New Calendar Name]
+    	      The name you wish to change the current name to.
+			
+=== Results
+    No results are returned for this handler.
+	
+    An exception is raised if there is not exactly one calendar with the
+    given current calendar name, or if there is an existing calendar with
+    the given new calendar name.		
+
+=== Sample Configuration
+    Calendar Name : Temporary Calendar
+    New Calendar Name : Permanent Calendar  
+
+=== Detailed Description
+    This handler allows you to update the name of a current calendar. There
+    must be exactly one calendar with the given name, and no calendars with
+    the new project name, or an exception will be raised.
+	
+===  Getting Your User Id Number
+	1. In a browser, login to your account.
+		here : https://launchpad.37signals.com/basecamp/signin
+	2. In the url, your user id comes right after the host name.
+		ex. https://basecamp.com/#######/etc
+			https://hostname.com/user_id/...

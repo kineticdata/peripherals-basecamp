@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="basecamp_project_todolist_delete" name="Basecamp Project TodoList Delete"
+	schema_version="1.0" version="1">
+	<author>support@kineticdata.com</author>
+	<description>Delete a todolist from a project in Basecamp.</description>
+	<helpurl></helpurl>
+	<visible>true</visible>
+	<deferrable>false</deferrable>
+	<parameters>
+	    <parameter id="project_name" label="Current Project Name" required="true" tooltip="The name of the project you wish to delete the todo list from." />
+	    <parameter id="todolist_name" label="Todo List Name" required="true" tooltip="The name of the todo list you wish to delete." />
+	</parameters>
+	<handler name="basecamp_project_todolist_delete" version="1">
+		<infos>
+			<info name="username">&lt;%= @info['username'] %&gt;</info>
+			<info name="password">&lt;%= @info['password'] %&gt;</info>
+			<info name="user_id">&lt;%= @info['user_id'] %&gt;</info>
+		</infos>
+		<parameters>
+		    <parameter name="project_name">&lt;%= @parameters['project_name'] %&gt;</parameter>
+		    <parameter name="todolist_name">&lt;%= @parameters['todolist_name'] %&gt;</parameter>
+		</parameters>
+	</handler>
+	<results format="xml" />
+</taskDefinition>
